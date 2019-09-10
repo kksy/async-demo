@@ -5,7 +5,7 @@ const nicePerson = (promiseHolder) => {
         await promiseHolder(true)
         return 'helps you';
       } catch {
-        throw 'says sorry'
+        return Promise.reject('says sorry')
       }
       
     }
